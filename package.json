@@ -10,6 +10,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
     "@next/font": "13.1.1",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
@@ -27,7 +29,7 @@
     "*.{js,jsx,ts,tsx,html,css}": "npx prettier --check"
   },
   "devDependencies": {
-    "lint-staged": "^13.1.0",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0"
   }
 }
