@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major"
   },
   "dependencies": {
     "@commitlint/cli": "^17.3.0",
@@ -25,11 +29,12 @@
   },
   "lint-staged": {
     "*.ts": "npx tsc --noEmit",
-    "*.{js,jsx,ts,tsx}": "npm run lint",
-    "*.{js,jsx,ts,tsx,html,css}": "npx prettier --check"
+    "*.{js,jsx,ts,tsx}": "npm run lint ./",
+    "*.{js,jsx,ts,tsx,html,css}": "npx prettier -c"
   },
   "devDependencies": {
     "husky": "^8.0.0",
-    "lint-staged": "^13.1.0"
+    "lint-staged": "^13.1.0",
+    "standard-version": "^9.5.0"
   }
 }
